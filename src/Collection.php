@@ -355,7 +355,7 @@ class Collection implements CollectionInterface
      */
     public function only(string ...$keys)
     {
-        return new static($this->intersectByKeys(array_flip($keys)));
+        return new static($this->intersectByKeys(array_flip($keys))->all());
     }
 
     /**
