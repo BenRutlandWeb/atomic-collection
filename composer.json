@@ -1,0 +1,23 @@
+{
+  "name": "brw/atomic-collection",
+  "description": "Collection",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ben Rutland Web",
+      "email": "info@benrutlandweb.co.uk"
+    }
+  ],
+  "require": {
+    "php": "^7.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Atomic\\Support\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  }
+}
