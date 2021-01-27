@@ -14,6 +14,14 @@ interface CollectionInterface extends
     JsonSerializable
 {
     /**
+     * Add an item to the collection.
+     *
+     * @param mixed $item
+     * @return static
+     */
+    public function add($item);
+
+    /**
      * Get the collection items
      *
      * @return array
@@ -391,7 +399,7 @@ interface CollectionInterface extends
      * @param string $key
      * @return mixed
      */
-    public function __get($key);
+    public function __get(string $key);
 
     /**
      * Dynamically set items in the collection
@@ -400,7 +408,7 @@ interface CollectionInterface extends
      * @param mixed $value
      * @return void
      */
-    public function __set($key, $value);
+    public function __set(string $key, $value): void;
 
     /**
      * Return the collection as a JSON string

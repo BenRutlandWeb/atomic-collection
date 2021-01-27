@@ -27,6 +27,19 @@ class Collection implements CollectionInterface
     }
 
     /**
+     * Add an item to the collection.
+     *
+     * @param mixed $item
+     * @return static
+     */
+    public function add($item)
+    {
+        $this->items[] = $item;
+
+        return $this;
+    }
+
+    /**
      * Get the collection items
      *
      * @return array
