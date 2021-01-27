@@ -1,7 +1,6 @@
 {
   "name": "brw/atomic-collection",
   "description": "Collection",
-  "type": "project",
   "license": "MIT",
   "authors": [
     {
