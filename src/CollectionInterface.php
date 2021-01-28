@@ -8,9 +8,11 @@ use IteratorAggregate;
 use JsonSerializable;
 
 interface CollectionInterface extends
+    Arrayable,
     ArrayAccess,
     Countable,
     IteratorAggregate,
+    Jsonable,
     JsonSerializable
 {
     /**
@@ -370,21 +372,6 @@ interface CollectionInterface extends
      * @return static
      */
     public function tap(callable $callback);
-
-    /**
-     * Get the collection of items as an array
-     *
-     * @return array
-     */
-    public function toArray(): array;
-
-    /**
-     * Get the collection of items as JSON
-     *
-     * @param int $options
-     * @return string
-     */
-    public function toJson(int $options = 0): string;
 
     /**
      * Return all the values of the collection

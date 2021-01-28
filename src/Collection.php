@@ -660,7 +660,7 @@ class Collection implements CollectionInterface
     {
         if (is_array($items)) {
             return $items;
-        } elseif ($items instanceof CollectionInterface) {
+        } elseif ($items instanceof Arrayable) {
             return $items->toArray();
         } elseif ($items instanceof Traversable) {
             return iterator_to_array($items);
